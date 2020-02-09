@@ -39,7 +39,7 @@ public class FirstTerranBot extends S2Agent {
         attackWithMarines();
     }
 
-    public void knowMyPlace() {
+    private void knowMyPlace() {
         comandCenters = observation().getUnits
                 (Alliance.SELF, UnitInPool.isUnit(Units.TERRAN_COMMAND_CENTER));
         Point myPos = comandCenters.get(0).unit().getPosition();
@@ -60,7 +60,7 @@ public class FirstTerranBot extends S2Agent {
 //            observation().getGameInfo().
     }
 
-    public void countMyUnits() {
+    private void countMyUnits() {
         barracks = observation().getUnits
                 (Alliance.SELF, UnitInPool.isUnit(Units.TERRAN_BARRACKS));
         scvs = observation().getUnits
